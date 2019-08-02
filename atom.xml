@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wannuliang.github.io</id>
     <title>RVKEA&apos;S BLOG</title>
-    <updated>2019-08-01T03:44:32.851Z</updated>
+    <updated>2019-08-02T04:40:45.650Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wannuliang.github.io"/>
     <link rel="self" href="https://wannuliang.github.io/atom.xml"/>
@@ -11,12 +11,14 @@
     <icon>https://wannuliang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, RVKEA&apos;S BLOG</rights>
     <entry>
-        <title type="html"><![CDATA[First Blog]]></title>
-        <id>https://wannuliang.github.io/post/first-blog</id>
-        <link href="https://wannuliang.github.io/post/first-blog">
+        <title type="html"><![CDATA[博客开张]]></title>
+        <id>https://wannuliang.github.io/post/my-first-blog</id>
+        <link href="https://wannuliang.github.io/post/my-first-blog">
         </link>
-        <updated>2019-08-01T02:30:00.000Z</updated>
-        <content type="html"><![CDATA[<p>博客开张，不知道写点啥好。</p>
+        <updated>2019-08-02T04:39:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>想折腾个博客挺久了，最近上班天天摸鱼，于是花了点时间找了个简单的方案把博客弄起来了...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>想折腾个博客挺久了，最近上班天天摸鱼，于是花了点时间找了个简单的方案把博客弄起来了...</p>
 ]]></content>
     </entry>
 </feed>
