@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wannuliang.github.io/favicon.ico?v=1584589047189">
+<link rel="shortcut icon" href="https://wannuliang.github.io/favicon.ico?v=1584590203356">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wannuliang.github.io/styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wannuliang.github.io">
-        <img src="https://wannuliang.github.io/images/avatar.png?v=1584589047189" class="site-logo">
+        <img src="https://wannuliang.github.io/images/avatar.png?v=1584590203356" class="site-logo">
         <h1 class="site-title">RVKEA&#39;S BLOG</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -116,6 +116,7 @@
             
             <div class="post-content">
               <p>描述：给定一个单向链表，判断该链表是否存在环，如果存在，找到入环点。</p>
+<!-- more -->
 <p>思路：快慢指针。如果链表有环，就像操场上两个人跑步，跑得快的人最终会超圈。如果没有环，就像是直线赛道，快的人直到终点也不会被慢的人追上。</p>
 <p>因此，针对环的存在问题，简单设置两个指针，快指针每次前进2步，慢指针每次前进1步，判断快指针抵达链表尾节点之前是否会与慢指针相遇即可（如果有环，其实就没有尾节点了）。</p>
 <p>针对第2个问题，直观上比较难想清楚，可以转化成一个数学问题来进行推理分析。</p>
