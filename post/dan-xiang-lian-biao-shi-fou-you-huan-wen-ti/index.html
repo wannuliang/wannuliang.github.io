@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | RVKEA&#39;S BLOG</title>
+<title>单向链表是否有环问题 | RVKEA&#39;S BLOG</title>
 <meta name="description" content="菜鸡型半藏玩家">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -111,15 +111,50 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-07-31</div>
+            <h2 class="post-title">单向链表是否有环问题</h2>
+            <div class="post-date">2020-03-19</div>
             
             <div class="post-content">
-              <p>rvkea 这个词代表什么含义？<br>
-没有含义，随机出来的，看着顺眼，就用了。</p>
+              <p>描述：给定一个单向链表，判断该链表是否存在环，如果存在，找到入环点。</p>
+<p>思路：快慢指针。如果链表有环，就像操场上两个人跑步，跑得快的人最终会超圈。如果没有环，就像是直线赛道，快的人直到终点也不会被慢的人追上。</p>
+<p>因此，针对环的存在问题，简单设置两个指针，快指针每次前进2步，慢指针每次前进1步，判断快指针抵达链表尾节点之前是否会与慢指针相遇即可（如果有环，其实就没有尾节点了）。</p>
+<p>针对第2个问题，直观上比较难想清楚，可以转化成一个数学问题来进行推理分析。</p>
+<p>假设：</p>
+<ul>
+<li>快指针速度为 v1 =2 * v</li>
+<li>慢指针速度为 v2 = v</li>
+<li>链表无环段长度为 l1</li>
+<li>链表有环段长度为 l2</li>
+<li>快指针抵达入环点的时间为 t1 = l1 / (2 * v)</li>
+<li>慢指针抵达入环点的时间为 t2 = l1 / v</li>
+</ul>
+<p>当慢指针抵达入环点时，快指针在有环段已经领先了 (t2 - t1) * v2 = l1，考虑到 l2 可能会小于 l1，所以快指针实际上领先的位置为 l1 % l2。此时是一个追及问题，快指针与慢指针相遇需要追赶 Δl = l2 - (l1 % l2) 的距离，需要追赶的时间 t3 = Δl / (v1 - v2) = Δl / v。追及开始时，慢指针位于入环点，相遇时慢指针走了 t3 * v2 = Δl。</p>
+<p>考虑两种情况：</p>
+<ul>
+<li>l1 &lt; l2，此时 Δl = l2 - l1。如果慢指针再走 l1 的路程，则它与入环点的距离为 Δl + l1 = l2，正好一整圈，也就是正好位于入环点。</li>
+<li>l1 &gt;= l2，此时 Δl = l2 - (l1 - n * l2) = (1 - n) * l2 - l1，n为整数。同样的，如果慢指针再走 l1 的路程，则它与入环点的距离为 Δl + l1 = (1 - n) * l2，正好也是整圈，也就是正好也位于入环点。</li>
+</ul>
+<p>那么如何才能使慢节点正好走 l1 的路程呢？答案就是让快节点回到链表表头，与慢节点一样，改为每次走1步，走到入环点时，正好路程也是 l1，此时，快慢节点必定相遇。</p>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://wannuliang.github.io/tag/xZ9Ykqm8m/" class="tag">
+                    算法
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wannuliang.github.io/post/my-first-blog/">
+                  <h3 class="post-title">
+                    博客开张
+                  </h3>
+                </a>
+              </div>
             
 
             
